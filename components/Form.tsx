@@ -58,11 +58,10 @@ export function useForm<T extends z.ZodType<any, any>>({
     } catch (err) {
       if (err instanceof ZodError) {
         // Separate extra property errors from regular validation errors
-        const extraPropertyErrors = result.error.issues.forEach(isExtraPropertyError);
-        const validationErrors = result.error.issues.forEach(
-          (issue) => !isExtraPropertyError(issue),
-        );
-
+ const extraPropertyErrors = err.issues.filter(isExtraPropertyError);
+const validationErrors = err.issues.filter(
+  (issue) => !isExtraPropertyError(issue),
+);
         // Extra property errors should be thrown
         if (extraPropertyErrors.length > 0) {
           throw new Error(
