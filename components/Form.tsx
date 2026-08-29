@@ -58,8 +58,8 @@ export function useForm<T extends z.ZodType<any, any>>({
     } catch (err) {
       if (err instanceof ZodError) {
         // Separate extra property errors from regular validation errors
-        const extraPropertyErrors = err.errors.filter(isExtraPropertyError);
-        const validationErrors = err.errors.filter(
+        const extraPropertyErrors = result.error.issues.forEach(isExtraPropertyError);
+        const validationErrors = result.error.issues.forEach(
           (issue) => !isExtraPropertyError(issue),
         );
 
@@ -126,7 +126,7 @@ export function useForm<T extends z.ZodType<any, any>>({
 
         if (!result.success) {
           // put back just the validation issues for this segment
-          result.error.errors.forEach((issue) => {
+          result.error.issues.forEach((issue) => {
             const ip = issue.path.join(".");
 
             // For shallow validation, only include errors for the exact path
