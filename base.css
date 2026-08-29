@@ -1,0 +1,192 @@
+@import url(https://fonts.googleapis.com/css2?family=Inter&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Poppins&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Caveat&display=swap);
+:root {
+  /* Content layers */
+  --z-content-low: 10; /* Minor elevated content */
+  --z-content: 20; /* Standard elevated content */
+  --z-content-high: 30; /* Important content that needs prominence */
+
+  /* Navigation layers */
+  --z-nav-low: 100; /* Secondary navigation components */
+  --z-nav: 200; /* Primary navigation bars */
+  --z-nav-sticky: 300; /* Sticky navigation elements */
+
+  --z-overlay: 400; /* All overlays like dropdowns, dialogs, popovers */
+
+  --z-spotlight: 1000; /* Tutorial spotlights/guided help */
+
+  /* System layers */
+  --z-critical: 2000; /* Critical system notifications */
+}
+
+:root {
+  --background: hsl(210, 20%, 98%);
+  --foreground: hsl(220, 15%, 20%);
+  --surface: hsl(210, 15%, 96%);
+  --surface-foreground: var(--foreground);
+  --sidebar: hsl(215, 25%, 27%);
+  --sidebar-foreground: hsl(210, 15%, 95%);
+  --card: hsl(0, 0%, 100%);
+  --card-foreground: var(--foreground);
+  --popup: hsl(0, 0%, 100%);
+  --popup-foreground: var(--foreground);
+  --primary: hsl(215, 70%, 50%);
+  --primary-foreground: hsl(0, 0%, 100%);
+  --secondary: hsl(250, 65%, 60%);
+  --secondary-foreground: hsl(0, 0%, 100%);
+  --accent: hsl(330, 80%, 60%);
+  --accent-foreground: hsl(0, 0%, 100%);
+  --muted: hsl(220, 15%, 85%);
+  --muted-foreground: hsl(220, 10%, 40%);
+  --success: hsl(145, 65%, 42%);
+  --success-foreground: hsl(0, 0%, 100%);
+  --error: hsl(358, 75%, 55%);
+  --error-foreground: hsl(0, 0%, 100%);
+  --warning: hsl(38, 95%, 60%);
+  --warning-foreground: hsl(38, 40%, 20%);
+  --info: hsl(200, 75%, 55%);
+  --info-foreground: hsl(0, 0%, 100%);
+  --info-hover: hsl(200, 75%, 50%);
+  --info-active: hsl(200, 75%, 45%);
+  --analytics: hsl(275, 65%, 55%);
+  --analytics-foreground: hsl(0, 0%, 100%);
+  --dashboard: hsl(190, 70%, 50%);
+  --dashboard-foreground: hsl(0, 0%, 100%);
+  --border: hsl(220, 15%, 90%);
+  --font-family-base: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  --font-family-heading: "Poppins", -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
+    "Helvetica Neue", sans-serif;
+  --font-family-monospace: "JetBrains Mono", SFMono-Regular, Consolas,
+    "Liberation Mono", Menlo, monospace;
+  --font-family-cursive: "Caveat", cursive;
+  --radius-sm: 0.25rem;
+  --radius: 0.5rem;
+  --radius-md: 0.75rem;
+  --radius-lg: 1rem;
+  --radius-full: 9999px;
+  --shadow: 0 1px 2px hsla(220, 15%, 5%, 0.05),
+    0 3px 6px hsla(220, 15%, 5%, 0.07);
+  --shadow-md: 0 1px 3px hsla(220, 15%, 5%, 0.05),
+    0 10px 15px -5px hsla(220, 15%, 5%, 0.05),
+    0 20px 25px -5px hsla(220, 15%, 5%, 0.04);
+  --shadow-lg: 0 1px 3px hsla(220, 15%, 5%, 0.05),
+    0 20px 25px -5px hsla(220, 15%, 5%, 0.07),
+    0 30px 40px -5px hsla(220, 15%, 5%, 0.05);
+  --shadow-focus: 0 0 0 2px hsla(215, 70%, 50%, 0.25),
+    0 1px 2px hsla(220, 15%, 5%, 0.05);
+  --animation-duration-fast: 150ms;
+  --animation-duration-normal: 250ms;
+  --animation-duration-slow: 350ms;
+  --spacing-1: 0.25rem;
+  --spacing-2: 0.5rem;
+  --spacing-3: 0.75rem;
+  --spacing-4: 1rem;
+  --spacing-6: 1.5rem;
+  --spacing-8: 2rem;
+  --spacing-12: 3rem;
+  --spacing-16: 4rem;
+  --chart-color-1: hsl(215, 70%, 50%);
+  --chart-color-2: hsl(250, 65%, 60%);
+  --chart-color-3: hsl(330, 80%, 60%);
+  --chart-color-4: hsl(145, 65%, 42%);
+  --chart-color-5: hsl(38, 95%, 60%);
+}
+
+.dark {
+  --background: hsl(220, 15%, 10%);
+  --foreground: hsl(210, 15%, 90%);
+  --surface: hsl(220, 15%, 13%);
+  --surface-foreground: var(--foreground);
+  --sidebar: hsl(215, 25%, 15%);
+  --sidebar-foreground: hsl(210, 15%, 90%);
+  --card: hsl(220, 15%, 15%);
+  --card-foreground: var(--foreground);
+  --popup: hsl(220, 15%, 15%);
+  --popup-foreground: var(--foreground);
+  --primary: hsl(215, 70%, 60%);
+  --primary-foreground: hsl(0, 0%, 100%);
+  --secondary: hsl(250, 65%, 65%);
+  --secondary-foreground: hsl(0, 0%, 100%);
+  --accent: hsl(330, 80%, 65%);
+  --accent-foreground: hsl(0, 0%, 100%);
+  --muted: hsl(220, 15%, 25%);
+  --muted-foreground: hsl(220, 10%, 70%);
+  --success: hsl(145, 65%, 45%);
+  --success-foreground: hsl(0, 0%, 100%);
+  --error: hsl(358, 75%, 60%);
+  --error-foreground: hsl(0, 0%, 100%);
+  --warning: hsl(38, 95%, 50%);
+  --warning-foreground: hsl(38, 40%, 90%);
+  --info: hsl(200, 75%, 60%);
+  --info-foreground: hsl(0, 0%, 100%);
+  --info-hover: hsl(200, 75%, 55%);
+  --info-active: hsl(200, 75%, 50%);
+  --analytics: hsl(275, 65%, 60%);
+  --analytics-foreground: hsl(0, 0%, 100%);
+  --dashboard: hsl(190, 70%, 55%);
+  --dashboard-foreground: hsl(0, 0%, 100%);
+  --border: hsl(220, 15%, 20%);
+  --shadow: 0 1px 2px hsla(220, 15%, 0%, 0.1),
+    0 3px 6px hsla(220, 15%, 0%, 0.15);
+  --shadow-md: 0 1px 3px hsla(220, 15%, 0%, 0.1),
+    0 10px 15px -5px hsla(220, 15%, 0%, 0.1),
+    0 20px 25px -5px hsla(220, 15%, 0%, 0.08);
+  --shadow-lg: 0 1px 3px hsla(220, 15%, 0%, 0.1),
+    0 20px 25px -5px hsla(220, 15%, 0%, 0.15),
+    0 30px 40px -5px hsla(220, 15%, 0%, 0.1);
+  --shadow-focus: 0 0 0 2px hsla(215, 70%, 60%, 0.25),
+    0 1px 2px hsla(220, 15%, 0%, 0.1);
+}
+
+/* Lácteo Financial Terminal — identidade única em todo o aplicativo */
+:root,
+.dark {
+  --background: #050b1f;
+  --foreground: #eef6ff;
+  --surface: #091731;
+  --surface-foreground: #eef6ff;
+  --sidebar: #020817;
+  --sidebar-foreground: #eef6ff;
+  --card: #0a1935;
+  --card-foreground: #eef6ff;
+  --popup: #0a1935;
+  --popup-foreground: #eef6ff;
+  --primary: #20e978;
+  --primary-foreground: #02150b;
+  --secondary: #198cff;
+  --secondary-foreground: #ffffff;
+  --accent: #ff146c;
+  --accent-foreground: #ffffff;
+  --muted: #15294c;
+  --muted-foreground: #8fa9cc;
+  --success: #20e978;
+  --success-foreground: #02150b;
+  --error: #ff286f;
+  --error-foreground: #ffffff;
+  --warning: #f6bd4b;
+  --warning-foreground: #171006;
+  --info: #19a7ff;
+  --info-foreground: #ffffff;
+  --analytics: #d52f91;
+  --dashboard: #18a8ff;
+  --border: rgba(49, 235, 133, 0.27);
+  --chart-color-1: #20e978;
+  --chart-color-2: #19a7ff;
+  --chart-color-3: #ff146c;
+  --chart-color-4: #7d8dff;
+  --chart-color-5: #f6bd4b;
+  --shadow: 0 8px 24px rgba(0, 4, 18, 0.28);
+  --shadow-md: 0 16px 38px rgba(0, 4, 18, 0.38);
+  --shadow-lg: 0 24px 60px rgba(0, 4, 18, 0.48);
+  --shadow-focus: 0 0 0 2px rgba(32, 233, 120, 0.27);
+}
+
+html,body{background:#050b1f;color:#eef6ff}
+body{background-image:linear-gradient(rgba(42,91,166,.075) 1px,transparent 1px),linear-gradient(90deg,rgba(42,91,166,.075) 1px,transparent 1px),radial-gradient(circle at 82% 8%,rgba(24,105,218,.2),transparent 33%);background-size:44px 44px,44px 44px,auto;background-attachment:fixed}
+input,select,textarea{background:#07142d!important;color:#eef6ff!important;border-color:rgba(49,235,133,.3)!important}
+input:focus,select:focus,textarea:focus{outline:none;box-shadow:0 0 0 2px rgba(32,233,120,.16)!important;border-color:#20e978!important}
+

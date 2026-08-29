@@ -1,0 +1,7 @@
+{
+  "framework": "vite",
+  "rewrites": [
+    { "source": "/_api/:path*", "destination": "/api/:path*" },
+    { "source": "/((?!api/|_api/|assets/|manifest.json|.*\\..*).*)", "destination": "/index.html" }
+  ]
+}

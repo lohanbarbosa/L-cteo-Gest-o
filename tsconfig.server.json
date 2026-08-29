@@ -1,0 +1,8 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "noEmit": true,
+    "types": ["node"]
+  },
+  "include": ["api/**/*.ts", "endpoints/**/*.ts", "helpers/db.tsx", "helpers/schema.tsx", "helpers/User.tsx", "helpers/getServerUserSession.tsx", "helpers/getSetServerSession.tsx", "helpers/generatePasswordHash.tsx"]
+}
